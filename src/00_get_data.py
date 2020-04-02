@@ -21,7 +21,7 @@ def get_data(url):
     df = pd.read_excel(url)
     print(df.head())
     
-    df.to_csv(filename, index=False)
+    df.to_csv(filename.replace(".xlsx", ".csv"), index=True)
     print(f"got {filename}")
 
 
